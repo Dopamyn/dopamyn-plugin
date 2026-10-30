@@ -1,0 +1,28 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "dopamyn",
+  "version": "1.1.0",
+  "description": "X (Twitter) intelligence and DM outreach for crypto brands, from your Dopamyn workspace. Requires an active Dopamyn subscription.",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Dopamyn",
+        "shortDescription": "X intelligence and DM outreach",
+        "longDescription": "Dopamyn connects your Dopamyn workspace to ChatGPT. Search X accounts, analyze followers, save accounts as lists, launch, pause and resume DM campaigns to a list, see reply rates, triage replies, and send a DM from your connected X account. Nothing is sent until you approve the message and the recipients. Every DM uses the same monthly allowance and message credits as a send from the Dopamyn app. Requires an active Dopamyn subscription.",
+        "developerName": "Dopamyn",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://dopamyn.ai",
+        "privacyPolicyURL": "https://dopamyn.ai/privacy-policy",
+        "termsOfServiceURL": "https://dopamyn.ai/terms-conditions",
+        "defaultPrompt": [
+          "Use Dopamyn to show replies to my DM campaigns that still need an answer.",
+          "Use Dopamyn to find DeFi founders on X with more than 10k followers and save them as a list.",
+          "Use Dopamyn to compare reply rates across my DM campaigns this month."
+        ],
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "dopamyn",
+  "owner": { "name": "Dopamyn" },
+  "metadata": {
+    "description": "Dopamyn plugins for Claude Code: X (Twitter) intelligence and DM outreach for crypto brands."
+  },
+  "plugins": [
+    {
+      "name": "dopamyn",
+      "source": "./",
+      "description": "X (Twitter) intelligence and DM outreach for crypto brands, from your Dopamyn workspace. Requires an active Dopamyn subscription.",
+      "author": { "name": "Dopamyn", "url": "https://dopamyn.ai" },
+      "homepage": "https://dopamyn.ai",
+      "category": "productivity",
+      "keywords": ["twitter", "x", "crypto", "dm", "outreach", "leads"]
+    }
+  ]
+}

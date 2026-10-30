@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "dopamyn": {
+      "type": "http",
+      "url": "https://mcp.dopamyn.ai/mcp"
+    }
+  }
+}

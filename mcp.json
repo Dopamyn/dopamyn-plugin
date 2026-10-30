@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "dopamyn": {
+      "type": "streamable-http",
+      "url": "https://mcp.dopamyn.ai/mcp",
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "oauth",
+            "baseScopes": ["user:org:read"]
+          }
+        }
+      }
+    }
+  }
+}

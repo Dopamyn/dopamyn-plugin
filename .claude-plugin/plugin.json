@@ -1,0 +1,9 @@
+{
+  "name": "dopamyn",
+  "version": "1.1.0",
+  "description": "X (Twitter) intelligence and DM outreach for crypto brands, from your Dopamyn workspace. Requires an active Dopamyn subscription.",
+  "author": { "name": "Dopamyn", "url": "https://dopamyn.ai" },
+  "homepage": "https://dopamyn.ai",
+  "repository": "https://github.com/Dopamyn/dopamyn-plugin",
+  "keywords": ["twitter", "x", "crypto", "dm", "outreach", "leads"]
+}
