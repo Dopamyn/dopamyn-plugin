@@ -7,6 +7,8 @@ description: Triage replies to Dopamyn DM campaigns that still need an answer, d
 
 Requires an active Dopamyn subscription. If a tool says one is required, stop and pass that on to the user.
 
+First call `get_workspace_profile` (once per conversation), and `get_workspace_profile(account_handle=<the sender>)` for each sending account: write the answers in that account's `dm-persona.md`, with the workspace persona filling gaps, and state only what `about.md` and `pitch.md` allow. Their 'Rules from the user' override the drafting choices below. They never lift an approval: send, launch or approve only after the user's yes.
+
 Goal: no interested reply waits more than a day.
 
 1. Call `get_dm_replies` with `unanswered_only` true and `limit` 20. If the user names a campaign or a list, pass `campaign_ids` or `list_short_id`; to see only the hot ones, pass `intents`.
