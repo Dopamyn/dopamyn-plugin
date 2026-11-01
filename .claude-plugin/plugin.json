@@ -5,5 +5,8 @@
   "author": { "name": "Dopamyn", "url": "https://dopamyn.ai" },
   "homepage": "https://dopamyn.ai",
   "repository": "https://github.com/Dopamyn/dopamyn-plugin",
+  "documentationUrl": "https://dopamyn.ai/mcp",
+  "privacyPolicyUrl": "https://dopamyn.ai/privacy-policy",
+  "supportUrl": "mailto:contact@dopamyn.ai",
   "keywords": ["twitter", "x", "crypto", "dm", "outreach", "leads"]
 }
