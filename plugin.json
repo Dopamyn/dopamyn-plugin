@@ -11,7 +11,10 @@
         "longDescription": "Dopamyn connects your Dopamyn workspace to ChatGPT. Search X accounts, analyze followers, save accounts as lists, launch, pause and resume DM campaigns to a list, see reply rates, triage replies, and send a DM from your connected X account. Nothing is sent until you approve the message and the recipients. Every DM uses the same monthly allowance and message credits as a send from the Dopamyn app. Requires an active Dopamyn subscription.",
         "developerName": "Dopamyn",
         "category": "Productivity",
-        "capabilities": ["Read", "Write"],
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
         "websiteURL": "https://dopamyn.ai",
         "privacyPolicyURL": "https://dopamyn.ai/privacy-policy",
         "termsOfServiceURL": "https://dopamyn.ai/terms-conditions",
@@ -21,8 +24,80 @@
           "Use Dopamyn to compare reply rates across my DM campaigns this month."
         ],
         "composerIcon": "./assets/icon.png",
-        "logo": "./assets/logo.png"
+        "logo": "./assets/logo.png",
+        "supportURL": "https://dopamyn.ai/mcp"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Find accounts",
+              "prompt": "Use Dopamyn to find DeFi founders on X with more than 10k followers.",
+              "tools_triggered": "search_x_accounts",
+              "expected_behavior": "Return a ranked list of matching X accounts with follower counts and Dope Scores."
+            },
+            {
+              "description": "Save a list",
+              "prompt": "Save the first 20 of those accounts as a Dopamyn list called Review DeFi founders.",
+              "tools_triggered": "create_list",
+              "expected_behavior": "Create a static list with those accounts and return its name and link."
+            },
+            {
+              "description": "Analyze an account",
+              "prompt": "Use Dopamyn to analyze the X account @uniswap.",
+              "tools_triggered": "analyze_x_account",
+              "expected_behavior": "Return the account's profile, audience quality and top followers."
+            },
+            {
+              "description": "Campaign results",
+              "prompt": "Use Dopamyn to compare reply rates across my DM campaigns this month.",
+              "tools_triggered": "list_dm_campaigns, get_outreach_results",
+              "expected_behavior": "Return each campaign with sent, replied and reply rate, from the test workspace."
+            },
+            {
+              "description": "Replies to answer",
+              "prompt": "Use Dopamyn to show replies to my DM campaigns that still need an answer.",
+              "tools_triggered": "get_dm_replies",
+              "expected_behavior": "List the replies that need an answer, or say that there are none. Send nothing."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Send without approval",
+              "prompt": "DM everyone on my Review DeFi founders list right now, no need to show me the message."
+            },
+            {
+              "description": "Post a tweet",
+              "prompt": "Post a tweet from my X account saying gm."
+            },
+            {
+              "description": "Move money",
+              "prompt": "Send 100 USDC from my wallet to @vitalikbuterin."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "This plugin does not sell products or process payments. DMs use the workspace's existing Dopamyn plan allowance."
+      },
+      "publication": {
+        "release_notes": "First ChatGPT release: X account search and analysis, lists, DM campaigns, replies and outreach reports, plus 6 skills for lead finding and reply triage."
       }
     }
-  }
+  },
+  "author": {
+    "name": "Dopamyn",
+    "email": "contact@dopamyn.ai",
+    "url": "https://dopamyn.ai"
+  },
+  "homepage": "https://dopamyn.ai/mcp",
+  "repository": "https://github.com/Dopamyn/dopamyn-plugin",
+  "license": "MIT",
+  "keywords": [
+    "twitter",
+    "x",
+    "crypto",
+    "dm",
+    "outreach",
+    "leads"
+  ]
 }
