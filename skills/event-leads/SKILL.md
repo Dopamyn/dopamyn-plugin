@@ -7,6 +7,8 @@ description: Find the attendees of a crypto event or its side events, pick the r
 
 Requires an active Dopamyn subscription. If a tool says one is required, stop and pass that on to the user.
 
+First call `get_workspace_profile` (once per conversation): pick attendees against `icp.md` and write the DM in the voice of `dm-persona.md` (and the sending account's persona). Its 'Rules from the user' override the targeting and drafting choices below. They never lift an approval: send, launch or approve only after the user's yes.
+
 1. Call `find_events` with the event name as `search`.
    - If the user means the whole main event, use its `main_event_id`.
    - If they mean one side event, use its `event_id`.

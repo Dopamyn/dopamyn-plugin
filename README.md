@@ -20,7 +20,7 @@ Updates do not run automatically: run `/plugin marketplace update dopamyn`, or t
 
 ## What you get
 
-The plugin adds the Dopamyn connector (`https://mcp.dopamyn.ai/mcp`) and five skills:
+The plugin adds the Dopamyn connector (`https://mcp.dopamyn.ai/mcp`) and seven skills:
 
 | Skill | Use it to |
 |---|---|
@@ -28,9 +28,11 @@ The plugin adds the Dopamyn connector (`https://mcp.dopamyn.ai/mcp`) and five sk
 | `competitor-leads` | Turn a competitor's audience into a list and a DM campaign |
 | `event-leads` | Reach hosts, sponsors and speakers of crypto events |
 | `keyword-leads` | Reach people posting about a keyword |
+| `icp-builder` | Turn one sentence about your ideal customers into a tested ICP and an Outreach Agent that finds new ones every day |
 | `weekly-report` | Write a weekly outreach report |
+| `agent-dms` | Schedule a Claude job that researches each new lead of an Outreach Agent and writes its DM; a Claude-drafted Auto DM campaign sends them at your daily cap |
 
-Nothing is sent until you approve the exact message and the recipients. Every DM uses the same monthly allowance and message credits as a send from the Dopamyn app.
+Nothing is sent until you approve the exact message and the recipients. The one exception is `agent-dms`: you approve the Outreach Agent, the sending accounts, the daily cap, the skip window and the brief once, with three sample DMs, and the scheduled job then adds a DM for each new lead without asking per DM. Every DM uses the same monthly allowance and message credits as a send from the Dopamyn app.
 
 ## Layout
 

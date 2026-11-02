@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "dopamyn",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "X (Twitter) intelligence and DM outreach for crypto brands, from your Dopamyn workspace. Requires an active Dopamyn subscription.",
   "extensions": {
     "com.openai": {

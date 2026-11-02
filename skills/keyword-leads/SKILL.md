@@ -7,6 +7,8 @@ description: Find people on X who are posting right now about a topic, token or 
 
 Requires an active Dopamyn subscription. If a tool says one is required, stop and pass that on to the user.
 
+First call `get_workspace_profile` (once per conversation): take keywords and the relevance brief from `icp.md` and `pitch.md`, and write the DM in the voice of `dm-persona.md` (and the sending account's persona). Its 'Rules from the user' override the targeting and drafting choices below. They never lift an approval: send, launch or approve only after the user's yes.
+
 1. Agree on the search with the user.
    - `keywords`: 1-4 strong words or a ticker (for example "$ETH restaking" or "bridge fees").
    - `exact_phrase` true only for a fixed phrase.

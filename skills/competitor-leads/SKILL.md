@@ -7,6 +7,8 @@ description: Turn a competitor's audience into a Dopamyn DM campaign - find peop
 
 Requires an active Dopamyn subscription. If a tool says one is required, stop and pass that on to the user.
 
+First call `get_workspace_profile` (once per conversation): take competitors from `competitors.md` first, then the saved ones from `get_competitors`; judge leads against `icp.md`; and write the DM in the voice of `dm-persona.md` (and the sending account's persona). Its 'Rules from the user' override the targeting and drafting choices below. They never lift an approval: send, launch or approve only after the user's yes.
+
 1. Find out which competitor to target.
    - If the user named one, use it.
    - If not, call `get_competitors(view="list")` for the saved competitors. `get_competitors(view="compare")` sets their reach and posting next to the user's own.
