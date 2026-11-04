@@ -1,0 +1,12 @@
+{
+  "name": "dopamyn",
+  "displayName": "Dopamyn",
+  "version": "1.2.0",
+  "description": "X intelligence and DM outreach for crypto brands, from your Dopamyn workspace. Requires an active Dopamyn subscription.",
+  "author": { "name": "Dopamyn", "email": "contact@dopamyn.ai" },
+  "homepage": "https://dopamyn.ai/mcp",
+  "repository": "https://github.com/Dopamyn/dopamyn-plugin",
+  "license": "MIT",
+  "keywords": ["x", "twitter", "crypto", "dm", "outreach", "leads", "mcp"],
+  "logo": "assets/logo-plate.png"
+}
