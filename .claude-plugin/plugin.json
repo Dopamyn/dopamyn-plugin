@@ -2,11 +2,19 @@
   "name": "dopamyn",
   "version": "1.2.0",
   "description": "X (Twitter) intelligence and DM outreach for crypto brands, from your Dopamyn workspace. Requires an active Dopamyn subscription.",
-  "author": { "name": "Dopamyn", "url": "https://dopamyn.ai" },
+  "author": {
+    "name": "Dopamyn",
+    "url": "https://dopamyn.ai"
+  },
   "homepage": "https://dopamyn.ai",
   "repository": "https://github.com/Dopamyn/dopamyn-plugin",
-  "documentationUrl": "https://dopamyn.ai/mcp",
   "privacyPolicyUrl": "https://dopamyn.ai/privacy-policy",
-  "supportUrl": "mailto:contact@dopamyn.ai",
-  "keywords": ["twitter", "x", "crypto", "dm", "outreach", "leads"]
+  "keywords": [
+    "twitter",
+    "x",
+    "crypto",
+    "dm",
+    "outreach",
+    "leads"
+  ]
 }
