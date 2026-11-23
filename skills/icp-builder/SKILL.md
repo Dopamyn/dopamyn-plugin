@@ -26,7 +26,6 @@ One search alone is noisy. A person who is in two or three searches is a strong 
    - **A2. Who + topic words (wider):** the same, with `text={"summary_word": [<the topic words>]}` in place of `ai_domains`, and `"ai_domains": [<topic>]` added to `exclude`. A2 then holds only the people A does not have. Without the exclude, most of A is also in A2, and the merge counts one signal twice.
    - **B. Who they follow:** with a saved Common Followers list of the seeds (`find_competitor_audience(view="watchlists")` lists them), call `find_competitor_audience(view="followers", watchlist=<its value>, tags=["traders"], entity_types=["person"], min_competitors_followed=5, ranges={"smart_followers": {"min": 100}, "following": {"max": 3000}}, sort_by="smart_followers", limit=50)`. A named list gives only its top 42 people and no `list_filters`, so save B from the handles shown. Without such a list, use `search_x_accounts(follows=[<the seeds>], ai_roles=[<role>])`, but `follows` matches people who follow any one seed, so it is wide.
    - **C. Who they engage with:** `search_x_accounts(engaged_with=[<the seeds>], engaged_with_days=90, engaged_with_min_count=2, ai_roles=[<role>])`. This shows active interest.
-   - **D. Events (optional):** `find_events(search=<the topic>)`, then `search_x_accounts(event_ids=[<the ids>], ai_roles=[<role>])`.
    - If a search finds more than 10,000 people, make it stricter before you save it. If it finds fewer than 30, drop it or make it wider.
 4. Paid search (optional). Ask the user first. `start_x_search(kind="keywords", keywords=<the topic words or tickers>, relevance_brief=<one sentence about who counts>)` saves the authors of matching posts as a list. Follow it with `get_x_search(view="job", job_id=<the job_id>)` until `done`. Run one search only.
 5. Save each kept search as a **static** list: `create_list(name="ICP <topic> - A", source="directory", filters=<the result's list_filters>)`. Save B with `create_list(name="ICP <topic> - B", handles=[<the handles shown>])`. Only static lists can be merged, so do not pass `list_type="dynamic"` here.
@@ -43,7 +42,6 @@ One search alone is noisy. A person who is in two or three searches is a strong 
       - A and A2 → `directory_match` (free) with the same filters.
       - B → `follows_n_of` (free) on the seed watchlist, with the same N as `min_competitors_followed`.
       - C → `engagers_of` on the seed watchlist (paid).
-      - D → `event_attendees` (free) on the same events.
       - The paid search of step 4 → `query_authors` (paid) with the same words.
       - Add `new_followers_of` on the seed watchlist (paid) to catch people who start to follow the seeds.
     - Lead filter = the "who" of the ICP card: `filters={"roles": [<role>], "domains": [<topic>], "traits": [...], "entity_type": "person", "min_smart_followers": <size>}`. Name it "ICP <topic> - leads". Leave `min_actors` at 1: it counts the different accounts in a lead's signals (for example two seeds that the lead engaged with), and a `directory_match` lead has none.

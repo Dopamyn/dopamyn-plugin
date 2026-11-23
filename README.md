@@ -20,19 +20,20 @@ Updates do not run automatically: run `/plugin marketplace update dopamyn`, or t
 
 ## What you get
 
-The plugin adds the Dopamyn connector (`https://mcp.dopamyn.ai/mcp`) and seven skills:
+The plugin adds the Dopamyn connector (`https://mcp.dopamyn.ai/mcp`) and eight skills:
 
 | Skill | Use it to |
 |---|---|
 | `daily-replies` | Triage replies to your DM campaigns and send approved answers |
 | `competitor-leads` | Turn a competitor's audience into a list and a DM campaign |
-| `event-leads` | Reach hosts, sponsors and speakers of crypto events |
 | `keyword-leads` | Reach people posting about a keyword |
 | `icp-builder` | Turn one sentence about your ideal customers into a tested ICP and an Outreach Agent that finds new ones every day |
+| `outreach-agents` | Set up an always-on Outreach Agent from a recipe (for example your competitors' audience), and add, remove, pause or replace its Stream Agents |
 | `weekly-report` | Write a weekly outreach report |
-| `agent-dms` | Schedule a Claude job that researches each new lead of an Outreach Agent and writes its DM; a Claude-drafted Auto DM campaign sends them at your daily cap |
+| `agent-dms` | Schedule a Claude job that researches each new lead of an Outreach Agent, or each new member of a live list, and writes its DM in the sending account's persona; a Claude-written Auto DM campaign sends them at your daily cap |
+| `background-dms` | Set up a campaign Dopamyn researches and writes in the background: for each person it answers your questions from their profile and posts, leaves out people who do not qualify, and writes the DM in the sending account's persona. You tune the brief on sample people first; nothing to schedule in Claude. |
 
-Nothing is sent until you approve the exact message and the recipients. The one exception is `agent-dms`: you approve the Outreach Agent, the sending accounts, the daily cap, the skip window and the brief once, with three sample DMs, and the scheduled job then adds a DM for each new lead without asking per DM. Every DM uses the same monthly allowance and message credits as a send from the Dopamyn app.
+In a chat, and in a Claude-written campaign, Claude writes every DM itself, in the sending account's persona from your workspace profile (the workspace persona fills what it does not cover; a Claude-written campaign needs the account's own `accounts/<x_id>/dm-persona.md`). For 10 people or fewer you approve each exact message before it is sent. More people get a campaign: your own text or variants, or a Claude-written campaign that you approve once as one block (the people, the sending accounts, the daily cap, the start time and 3-5 sample DMs; ask to see every DM if you want). Dopamyn then schedules the DMs and applies the gap, daily cap, cooldown and skips. With `agent-dms`, the scheduled job adds a DM for each new lead or list member without asking per DM, up to the day's room. Every DM spends one credit (your monthly plan credits, then purchased credits), the same as a send from the Dopamyn app. When a campaign does not fit in your credits now, Claude shows you the numbers and the choices and waits for yours.
 
 ## Layout
 

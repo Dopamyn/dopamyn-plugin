@@ -31,6 +31,6 @@ Goal: no interested reply waits more than a day.
 Rules:
 - Never call `send_dm` without the user's approval of the exact text.
 - If a send result is uncertain, do not retry. Tell the user to check the conversation on X.
-- Each send uses one DM from the monthly allowance, then message credits.
+- Each send spends one credit: the month's plan credits first, then purchased credits.
 
 End with one line: sent, skipped, blocked, and still waiting.

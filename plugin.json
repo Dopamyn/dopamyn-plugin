@@ -1,14 +1,14 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "dopamyn",
-  "version": "1.2.0",
+  "version": "1.3.1",
   "description": "X (Twitter) intelligence and DM outreach for crypto brands, from your Dopamyn workspace. Requires an active Dopamyn subscription.",
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Dopamyn",
         "shortDescription": "X intelligence and DM outreach",
-        "longDescription": "Dopamyn connects your Dopamyn workspace to ChatGPT. Search X accounts, analyze followers, save accounts as lists, launch, pause and resume DM campaigns to a list, see reply rates, triage replies, and send a DM from your connected X account. Nothing is sent until you approve the message and the recipients. Every DM uses the same monthly allowance and message credits as a send from the Dopamyn app. Requires an active Dopamyn subscription.",
+        "longDescription": "Dopamyn connects your Dopamyn workspace to ChatGPT. Search X accounts, analyze followers, save accounts as lists, launch, pause and resume DM campaigns to a list, see reply rates, triage replies, and send a DM from your connected X account. Nothing is sent until you approve the message and the recipients. Every DM spends one credit (your monthly plan credits, then purchased credits), the same as a send from the Dopamyn app. Requires an active Dopamyn subscription.",
         "developerName": "Dopamyn",
         "category": "Productivity",
         "capabilities": [

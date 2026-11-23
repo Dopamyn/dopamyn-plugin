@@ -17,9 +17,9 @@ Requires an active Dopamyn subscription. If a tool says one is required, stop an
    - **Needs you:** interested replies not answered (`needs_answer`). If it is above zero, offer the daily-replies playbook.
    - **What works:** the best campaign, sender and message by reply rate. Ignore groups with `low_sample` true and say so.
    - **What does not:** the weakest group and the top `not_sent_reasons`.
-   - **Capacity:** sends left this cycle (`left`: monthly allowance plus message credits) and running campaigns.
+   - **Capacity:** credits left (`left`: this month's plan credits plus purchased credits) and running campaigns.
    - **Pipeline:** contacts and deal value per stage, when the workspace uses the CRM board.
    - **Next week:** 2-3 concrete actions, for example pause a weak campaign, reuse the best message, or run competitor-leads. A rerun of a campaign's `no_reply` people (`launch_dm_campaign` with `rerun_campaign_id`) sends real DMs: offer it with its `rerun_counts` size and wait for the user.
-5. Rates are fractions of DMs sent. Show them as percentages.
+5. Rates are 0-1; reply and interested rates are over DMs sent. Show them as percentages. The Seen fields of `get_outreach_results` are null; for Seen numbers of a follow-up sequence, use `get_dm_sequence_results`.
 
 Do not pause, launch or send anything from this report. Offer the action and wait for the user.
